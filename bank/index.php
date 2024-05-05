@@ -66,19 +66,12 @@
         <div class="bubble">
             <div class="listarea">
                 <?php
-                $nasabah = new controller ();
+                $nasabah = new controller();
                 // $nasabah -> newUser ($nama, $norek, $alamat, $telepon, $saldo);
-                $nasabah -> newUser ('Ucup1', '123456789', 'Bandung', '0812', '999999999');
-                $nasabah->newUser('Ucup2', '123456789', 'Bandung', '0812', '999999999');
-                $nasabah->newUser('Ucup3', '123456789', 'Bandung', '0812', '999999999');
-                $nasabah->getUser(1);
-                $edit = new nasabah('Andi', '1234321', 'Medan', '9876', '1000');
-                $nasabah->editUser(1, $edit);
-                $nasabah->getUser(1);
-                $nasabah->newUser('Ucup4', '123456789', 'Bandung', '0812', '999999999');
-                $nasabah->getUsers();
-                $nasabah->deleteUser(1);
-                $nasabah->getUsers();
+                $nasabah -> newUser ('Budi', '1234567890', 'Jl. Jalan No. 1', '081234567890', 1000000);
+                $nasabah -> newUser ('Budiono', '1234567890', 'Jl. Jalan No. 1', '081234567890', 1000000);
+                $nasabah -> deleteUser (0);
+                $nasabah -> getUsers();
                 ?>
             </div>
         </div>
