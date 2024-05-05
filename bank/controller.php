@@ -8,17 +8,17 @@
             $this -> model = new model();
         }
 
-        public function newUser($id, $nama, $norek, $alamat, $nohp, $saldo){
-            $xuser = new nasabah ($id, $nama, $norek, $alamat, $nohp, $saldo);
+        public function newUser($nama, $norek, $alamat, $nohp, $saldo){
+            $xuser = new nasabah ($nama, $norek, $alamat, $nohp, $saldo);
             $this -> model -> _create ($xuser);
         }
 
         public function getUsers(){
-            return $this -> model -> _show();
+            $this -> model -> _show();
         }
 
         public function getUser($id){
-            return $this -> model -> _find($id);
+            $this -> model -> _find($id);
         }
 
         public function editUser($id, $xuser){
