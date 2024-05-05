@@ -14,11 +14,17 @@
         crossorigin="anonymous"
     >
     <style>
-        p {
-            margin: 0.5rem;
-        }
+        p { margin: 0.5rem; }
         hr {
+            border: solid 1px rgba(0, 0, 0, 0.1);
             width: 100%;
+        }
+        .attribute {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding-left: 1rem;
+            text-align: left;
         }
         .container {
             display: flex;
@@ -39,9 +45,6 @@
             border-radius: 30px;
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
-        .bubble h3 {
-            margin-top: 1rem;
-        }
         .listarea {
             margin: 1rem;
             overflow: auto;
@@ -50,13 +53,6 @@
         }
         .listarea::-webkit-scrollbar {
             display: none;
-        }
-        .list {
-            margin: 0;
-            text-align: left;
-        }
-        .list li {
-            padding-bottom: 0.5rem;
         }
     </style>
 </head>
@@ -71,14 +67,15 @@
             <div class="listarea">
                 <?php
                 $nasabah = new controller ();
-                $nasabah->newUser('1', 'Ucup1', '123456789', 'Bandung', '0812', '999999999');
-                $nasabah->newUser('2', 'Ucup2', '123456789', 'Bandung', '0812', '999999999');
-                $nasabah->newUser('3', 'Ucup3', '123456789', 'Bandung', '0812', '999999999');
+                // $nasabah -> newUser ($nama, $norek, $alamat, $telepon, $saldo);
+                $nasabah -> newUser ('Ucup1', '123456789', 'Bandung', '0812', '999999999');
+                $nasabah->newUser('Ucup2', '123456789', 'Bandung', '0812', '999999999');
+                $nasabah->newUser('Ucup3', '123456789', 'Bandung', '0812', '999999999');
                 $nasabah->getUser(1);
-                $edit = new nasabah('4', 'Andi', '1234321', 'Medan', '9876', '1000');
+                $edit = new nasabah('Andi', '1234321', 'Medan', '9876', '1000');
                 $nasabah->editUser(1, $edit);
                 $nasabah->getUser(1);
-                $nasabah->newUser('4', 'Ucup4', '123456789', 'Bandung', '0812', '999999999');
+                $nasabah->newUser('Ucup4', '123456789', 'Bandung', '0812', '999999999');
                 $nasabah->getUsers();
                 $nasabah->deleteUser(1);
                 $nasabah->getUsers();
