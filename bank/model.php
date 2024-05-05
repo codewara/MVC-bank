@@ -13,11 +13,13 @@
         public function _show () {
             foreach ($this -> user as $users) {
                 $users -> print ();
+                echo '<hr>';
             }
         }
-
+        
         public function _find ($id) {
             $this -> user[$id] -> print ();
+            echo '<hr>';
         }
 
         public function _update ($id, $xuser){
