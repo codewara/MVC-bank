@@ -1,14 +1,12 @@
 <?php
     class nasabah {
-        private $id;
         private $nama;
         private $norek;
         private $alamat;
         private $nohp;
         private $saldo;
 
-        public function __construct($id, $nama, $norek, $alamat, $nohp, $saldo){
-            $this -> id = $id;
+        public function __construct($nama, $norek, $alamat, $nohp, $saldo){
             $this -> nama = $nama;
             $this -> norek = $norek;
             $this -> alamat = $alamat;
@@ -17,13 +15,23 @@
         }
 
         public function print(){
-            echo '<p>
-            Nama &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp: ' . $this -> nama . '<br>
-            No Rekening : ' . $this -> norek . '<br>
-            Alamat &nbsp &nbsp &nbsp &nbsp &nbsp: ' . $this -> alamat . '<br>
-            No HP &nbsp &nbsp &nbsp &nbsp &nbsp : ' . $this -> nohp . '<br>
-            Saldo &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp : Rp.' . $this -> saldo . '<br>
-            </p>';
+            echo '
+            <div class="attribute">
+                <div>
+                    <p>Nama Nasabah</p>
+                    <p>Nomor Rekening</p>
+                    <p>Alamat</p>
+                    <p>Nomor Telepon</p>
+                    <p>Saldo</p>
+                </div>
+                <div>
+                    <p>: '.$this->nama.'</p>
+                    <p>: '.$this->norek.'</p>
+                    <p>: '.$this->alamat.'</p>
+                    <p>: '.$this->nohp.'</p>
+                    <p>: Rp.'.$this->saldo.'</p>
+                </div>
+            </div>';
         }
     }
 ?>
