@@ -68,9 +68,7 @@
                 <?php
                 $nasabah = new controller();
                 // $nasabah -> newUser ($nama, $norek, $alamat, $telepon, $saldo);
-                $nasabah -> newUser ('Budi', '1234567890', 'Jl. Jalan No. 1', '081234567890', 1000000);
-                $nasabah -> newUser ('Budiono', '1234567890', 'Jl. Jalan No. 1', '081234567890', 1000000);
-                $nasabah -> deleteUser (0);
+                
                 $nasabah -> getUsers();
                 ?>
             </div>
